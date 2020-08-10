@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    background-color: #444444;
+    cursor: crosshair;
+    caret-color: yellow;
+    background-image: url("Assets/Team Photos/mainpagebackground.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Hover Over */
+
+.menu :hover{
+background: linear-gradient(180deg, rgba(168, 135, 2, 0.5) 0%, rgba(196, 196, 196, 0) 100%);
+cursor: crosshair;
+}
+
+/* Menu Items */
+
+.menuItem{
+position: relative;
+width: 391px;
+height: 52px;
+left: 93px;
+top: 350px;
+
+font-family: 'Audiowide';
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 57px;
+list-style-type: none;
+background-color: rgba(0, 0, 0, 0);
+color: rgba(163, 163, 163);
+}
+
+/* Team Titan PNW */
+
+.title {
+position: relative;
+/* left: 36%; */
+top: 57px;
+width: 100%;
+font-family: 'Audiowide';
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 57px;
+text-align: center;
+background-color: #444444 0;
+
+color: #A88702;
+}
+
