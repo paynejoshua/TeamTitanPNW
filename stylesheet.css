@@ -23,7 +23,7 @@ position: relative;
 width: 391px;
 height: 52px;
 left: 93px;
-top: 350px;
+top: 225px;
 
 font-family: 'Audiowide';
 font-style: normal;
@@ -40,7 +40,7 @@ color: rgba(163, 163, 163);
 .title {
 position: relative;
 /* left: 36%; */
-top: 57px;
+top: 20px;
 width: 100%;
 font-family: 'Audiowide';
 font-style: normal;
