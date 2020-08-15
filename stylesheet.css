@@ -1,19 +1,19 @@
 * {
     box-sizing: border-box;
-    background-color: #444444;
     cursor: crosshair;
-    caret-color: yellow;
-    background-image: url("Assets/Team Photos/mainpagebackground.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+}
+
+body {
+  background-image: url("Assets/Team Photos/mainpagebackground.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* Hover Over */
 
 .menu :hover{
 background: linear-gradient(180deg, rgba(168, 135, 2, 0.5) 0%, rgba(196, 196, 196, 0) 100%);
-cursor: crosshair;
 }
 
 /* Menu Items */
@@ -29,13 +29,28 @@ font-size: 45px;
 line-height: 57px;
 background-color: rgba(0, 0, 0, 0);
 color: rgba(163, 163, 163);
+text-decoration: none;
+}
+
+.nav :hover {
+  background: linear-gradient(180deg, rgba(168, 135, 2, 0.5) 0%, rgba(196, 196, 196, 0) 100%);
+  
+}
+
+.navItem{
+position: relative;
+font-family: 'Audiowide';
+font-size: 25px;
+line-height: 57px;
+background-color: rgba(0, 0, 0, 0);
+color: rgba(163, 163, 163);
+text-decoration: none;
 }
 
 /* Team Titan PNW */
 
 .title {
 position: relative;
-/* left: 36%; */
 top: 20px;
 width: 100%;
 font-family: 'Audiowide';
@@ -45,7 +60,106 @@ font-size: 45px;
 line-height: 57px;
 text-align: center;
 background-color: #444444 0;
-
 color: #A88702;
 }
 
+.card-layout:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0);
+    transition: 0.3s;
+    text-align: center;  
+    float: left;
+    width: 25%;
+    margin: 4%;
+  }
+
+  h4 {
+    background-color: #A88702;
+    font-family: 'Audiowide';
+  }
+
+  .name {
+    background-color: #A88702;
+    font-family: 'Audiowide';
+  }
+
+  .faction {
+    background-color: #A88702;
+    font-family: 'Audiowide';
+  }
+
+  .squad-name {
+    background-color: #A88702;
+    font-family: 'Audiowide';
+  }
+
+  .squad-description {
+    background-color: #A88702;
+    font-family: 'Audiowide';
+  }
+
+  
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+    background-color: #A88702;
+    align-items: center;
+    
+  }
+
+  /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  justify-content: center;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #A88702;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #A88702;
+  
+  transform: rotateY(180deg);
+}
