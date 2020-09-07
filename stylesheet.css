@@ -40,11 +40,12 @@ text-decoration: none;
 .navItem{
 position: relative;
 font-family: 'Audiowide';
-font-size: 25px;
-line-height: 57px;
+font-size: 150%;
+line-height: 250%;
 background-color: rgba(0, 0, 0, 0);
 color: rgba(163, 163, 163);
 text-decoration: none;
+padding: 1%;
 }
 
 /* Team Titan PNW */
@@ -163,3 +164,26 @@ color: #A88702;
   
   transform: rotateY(180deg);
 }
+
+/* About Us Page */
+
+.aboutUsHeader {
+  color: white;
+  text-align: center;
+}
+
+.aboutUs {
+  color: white;
+  text-align: center;
+}
+
+.teamContainer {
+  padding: 2%;
+  margin-top: 100%;
+}
+
+.teamMember {
+  text-decoration: none;
+}
+
+
