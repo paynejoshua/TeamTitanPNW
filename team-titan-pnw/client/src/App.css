@@ -1,3 +1,4 @@
+/* Styling for React App */
 .App {
   text-align: center;
 }
@@ -36,6 +37,8 @@
     transform: rotate(360deg);
   }
 }
+
+/* Styling for Team Titan Website */
 
 * {
   box-sizing: border-box;
@@ -90,6 +93,19 @@ padding: 1%;
 }
 
 /* Team Titan PNW */
+
+.pageTitle {
+position: relative;
+color: white;
+top: 20px;
+width: 100%;
+font-family: 'Audiowide';
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 57px;
+text-align: center;
+}
 
 .title {
 position: relative;
@@ -227,4 +243,5 @@ margin-top: 100%;
 text-decoration: none;
 }
 
+/* Contact Us Page */
 
