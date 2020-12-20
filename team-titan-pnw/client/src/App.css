@@ -245,3 +245,23 @@ text-decoration: none;
 
 /* Contact Us Page */
 
+
+
+/* Calendar */
+
+.react-calendar__month-view__weekdays__weekday {
+color: white;
+justify-content: center;
+}
+
+.react-calendar {
+  height: 50rem;  
+  justify-content: center;
+}
+
+.react-calendar__tile {
+  padding: 4rem;
+  background-color: #A88702;
+  color: white;
+  border-radius: 50%;
+}
