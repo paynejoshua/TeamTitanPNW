@@ -6,11 +6,13 @@ function AboutUs() {
     return (
         <>
         <header>
+            <div className="nav">
                 <Link to="/home" className="navItem">Home</Link>
                 <Link to="/contactUs" className="navItem">Contact Us</Link>
                 <Link to="/events" className="navItem">Events</Link>
                 <Link to="/media" className="navItem">Media</Link>
                 <Link to="/meetTheTeam" className="navItem">Meet The Team</Link>
+                </div>
         </header>
             <div className="container">
                 <h1 className="aboutUsHeader">About Us</h1>
