@@ -7,15 +7,15 @@ import Card from "react-bootstrap/Card"
 
 function Media() {
 
-    const [photo, setPhoto] = useState()
+    // const [photos, setPhoto] = useState()
 
-    useEffect(() => {
-        fetch("https://source.unsplash.com/1600x900/?beach")
-        .then(res => {
-            setPhoto(res)
-        })
-        
-    }, []) 
+  
+
+    // useEffect(() => {
+    //     // Once database is up and running and photos have been put into database. Have them rendered here
+
+    // })
+    
 
     return (
         <>
@@ -30,7 +30,7 @@ function Media() {
             </header>
             <h1 className="pageTitle">Media Page</h1>
             <Card style={{width: "18rem"}}>
-            <Card.Img variant="top" src={photo} style={{width: "18rem"}} />
+            {/* <Card.Img variant="top" src={photos} style={{width: "18rem"}} /> */}
           
             </Card>
         </>

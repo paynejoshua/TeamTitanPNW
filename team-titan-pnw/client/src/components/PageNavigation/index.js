@@ -1,9 +1,9 @@
-import Home from "../../pages/home.js";
-import AboutUs from "../../pages/about-us";
-import ContactUs from "../../pages/contact-us.js";
-import Events from "../../pages/events.js";
-import Media from "../../pages/media.js";
-import MeetTheTeam from "../../pages/meet-the-team.js";
+import Home from "../../pages/Home.js";
+import AboutUs from "../../pages/AboutUs";
+import ContactUs from "../../pages/ContactUs.js";
+import Events from "../../pages/Events.js";
+import Media from "../../pages/Media.js";
+import MeetTheTeam from "../../pages/MeetTheTeam.js";
 
 
 
