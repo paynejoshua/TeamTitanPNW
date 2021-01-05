@@ -1,0 +1,33 @@
+{
+  "name": "TeamTitanPNW",
+  "version": "1.0.0",
+  "description": "Welcome to the Team Titan PNW Airsoft website. This is a website for an airsoft team in Washington State.  Over the last 2 years this team has continued to grow in numbers and in recognition. This website is meant to  help the team direct inquiries and information about their team to anyone who is interested in joining their team.",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.9",
+    "node": "^15.4.0",
+    "nodemon": "^2.0.6",
+    "react-moment": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paynejoshua/TeamTitanPNW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paynejoshua/TeamTitanPNW/issues"
+  },
+  "homepage": "https://github.com/paynejoshua/TeamTitanPNW#readme"
+}
