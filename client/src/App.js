@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route} from "react-router-dom"
 import Switch from "react-bootstrap/esm/Switch";
 import PageNav from "./components/PageNavigation"
+import imgUpload from "./components/PhotoUpload/index"
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
        <Route exact path="/events" component={PageNav.events} />
        <Route exact path="/media" component={PageNav.media} />
        <Route exact path="/meetTheTeam" component={PageNav.meetTheTeam} />
+       <Route exact path="/imageupload" component={imgUpload} /> 
      </Switch>
    </Router>
   );

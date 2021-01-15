@@ -4,12 +4,12 @@ const Schema = mongoose.Schema
 
 const Profile = new Schema(
     {
-        name: { type: String, required: true },
+        name: { type: String },
         callSign: { type: String },
-        faction: { type: String, required: true },
+        faction: { type: String },
         rank: { type: String },
         description: { type: String},
-        // create a profilePic field here *Base64?
+        profilePic: {type: String}
     },
 
 )

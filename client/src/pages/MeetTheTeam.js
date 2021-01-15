@@ -1,11 +1,35 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
-import Team from "../components/MeetTheTeam/index"
 import Card from "react-bootstrap/Card"
+import api from "../api/index"
+import PhotoUpload from "../components/PhotoUpload/index"
 
 function MeetTheTeam() {
 
-    const teams = [Team.ballistas, Team.hellhounds, Team.spartans]
+    const [profile, setProfile] = useState([])
+
+    useEffect(() => {
+        console.log("here")
+        api.getAllProfiles()
+            .then(res => {
+                setProfile(res.data.data)
+            })
+        }, [])
+    
+    const saveImage = (id, image) => {
+        console.log(profile)
+        console.log("image" ,image)
+        setProfile(profile.map((item) => {
+            if (item._id == id ) {
+                console.log("item.profilePic 1", image)
+                item.profilePic = image
+                console.log("item.profilePic 2", item.profilePic)
+            }
+            return item
+        }))
+
+    }
+
 
     return (
         <>
@@ -22,9 +46,9 @@ function MeetTheTeam() {
             <h1 className="pageTitle">Meet The Team</h1>
 
             <section className="card-layout">
-                {teams.map(item => {
+                {profile.map(item => {
                     return (
-                        <Card style={{ width: '18rem' }} className="flip-card">
+                        <Card key={item.name} style={{ width: '18rem' }} className="flip-card">
                             <div className="flip-card-inner">
                                 <div className="flip-card-front">
 
@@ -43,11 +67,13 @@ function MeetTheTeam() {
                                 <div className="flip-card-back">
                                     <div className="container">
                                         <Card.Img variant="top" src={item.profilePic} style={{width: "100%", height: "144px"}} />
-                                        <Card.Title>Leader: {item.leader}</Card.Title>
+                                        <PhotoUpload 
+                                            id={item._id}
+                                            onSaveImage={saveImage} />
+                                        <Card.Title>Leader: {item.name}</Card.Title>
                                         <Card.Title>Call Sign: {item.callSign}</Card.Title>
                                         <Card.Title>Faction: {item.faction}</Card.Title>
                                         <Card.Body>{item.description}</Card.Body>
-
                                     </div>
                                 </div>
 
