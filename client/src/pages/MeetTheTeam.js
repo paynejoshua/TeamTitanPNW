@@ -9,7 +9,6 @@ function MeetTheTeam() {
     const [profile, setProfile] = useState([])
 
     useEffect(() => {
-        console.log("here")
         api.getAllProfiles()
             .then(res => {
                 setProfile(res.data.data)
@@ -17,16 +16,18 @@ function MeetTheTeam() {
         }, [])
     
     const saveImage = (id, image) => {
-        console.log(profile)
-        console.log("image" ,image)
-        setProfile(profile.map((item) => {
-            if (item._id == id ) {
-                console.log("item.profilePic 1", image)
-                item.profilePic = image
-                console.log("item.profilePic 2", item.profilePic)
-            }
-            return item
-        }))
+        // console.log(profile)
+        // console.log("image" ,image)
+        // setProfile(profile.map((item) => {
+        //     if (item._id == id ) {
+        //         console.log("item.profilePic 1", image)
+        //         item.profilePic = image
+        //         console.log("item.profilePic 2", item.profilePic)
+        //     }
+        //     return item
+        // }))
+
+        window.location.reload()
 
     }
 

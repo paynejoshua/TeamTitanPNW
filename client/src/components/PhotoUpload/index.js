@@ -5,7 +5,7 @@ function ImageUpload(props) {
 
     const uploadPhoto = async (e) => {
         const file = e.target.files[0]
-        const base64 = convertBase64(file).then(image => {
+        convertBase64(file).then(image => {
             updateDatabase(image)
 
         })
@@ -35,7 +35,6 @@ function ImageUpload(props) {
         api.updateProfile(props.id, payload)
             .then(res => {
                 console.log(res.data.profilePic)
-                props.onSaveImage(res.data._id, "")
                 props.onSaveImage(res.data._id, res.data.profilePic)
 
             })
@@ -46,6 +45,7 @@ function ImageUpload(props) {
         <div>
             <input 
             type="file" 
+            // onChange={(e) => props.onSaveImage("5ff4ea1f0f8fe60f9fda320e", "")} 
             onChange={(e) => uploadPhoto(e)} 
             />
 
