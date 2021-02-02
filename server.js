@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const db = require('./db')
-const profileRouter = require("./routes/profile-router")
+const router = require("./routes/router")
 
 const app = express()
 const apiPort = process.env.PORT || 3001
@@ -18,6 +18,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.use("/api", profileRouter)
+app.use("/api", router)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))

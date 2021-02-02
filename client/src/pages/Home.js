@@ -1,32 +1,51 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import Jumbotron from "react-bootstrap/Jumbotron";
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col"
+
 
 function Home() {
 
+
     return (
         <>
-        <section className="mainpage">
-        <h1 className="title">Team Titan PNW</h1>
-        <div className="menu">
+            <div className="fullScreenBG smallScreenBG">
 
+                <Row className="d-flex h-100 justify-content-center justify-content-md-start">
+                    <Col xs={12} className='d-flex justify-content-center justify-content-md-start'>
+                        <Jumbotron className="transparent">
+                            <div className="title">Team Titan PNW</div>
+                        </Jumbotron>
+                    </Col>
+                    <div>
 
-            <Link to="/aboutUs" className="menuItem" id="about-us">About Us</Link>
-            <br />
-            <Link to="/meetTheTeam" className="menuItem" id="meet-the-team">Meet the Team</Link>
-            <br />
-            <Link to="/events" className="menuItem" id="calendarLink">Events</Link>
-            <br />
-            <Link to="/contactUs" className="menuItem" id="contact-us">Contact Us</Link>
-            <br />
-            <Link to="/media" className="menuItem" id="media">Media</Link>
-        </div>
-   
-        </section>
+                        <Col xs={12} className='d-flex justify-content-center justify-content-md-start'>
+                            <Link to="/aboutUs" id="about-us" className="menuItem">About Us</Link>
+                        </Col>
+                        <Col xs={12} className='d-flex justify-content-center justify-content-md-start'>
+                            <Link to="/meetTheTeam" id="meet-the-team" className="menuItem">Meet the Team</Link>
+                        </Col>
+                        <Col xs={12} className='d-flex justify-content-center justify-content-md-start'>
+                            <Link to="/events" id="calendarLink" className="menuItem">Events</Link>
+                        </Col>
+                        <Col xs={12} className='d-flex justify-content-center justify-content-md-start'>
+                            <Link to="/contactUs" id="contact-us" className="menuItem">Contact Us</Link>
+                        </Col>
+                        <Col xs={12} className='d-flex justify-content-center justify-content-md-start'>
+                            <Link to="/media" id="media" className="menuItem">Media</Link>
+                        </Col>
+                    </div>
 
+                </Row>
+            </div>
+
+            
         </>
 
 
-      
+
     )
 }
 

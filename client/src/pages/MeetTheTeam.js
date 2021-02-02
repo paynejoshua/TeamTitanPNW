@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card"
 import api from "../api/index"
@@ -13,8 +13,8 @@ function MeetTheTeam() {
             .then(res => {
                 setProfile(res.data.data)
             })
-        }, [])
-    
+    }, [])
+
     const saveImage = (id, image) => {
         // console.log(profile)
         // console.log("image" ,image)
@@ -37,9 +37,10 @@ function MeetTheTeam() {
             <header>
                 <div className="nav">
                     <Link to="/home" className="navItem">Home</Link>
-                    <Link to="/aboutUs" className="navItem">About Us</Link>
-                    <Link to="/contactUs" className="navItem">Contact Us</Link>
+                    <Link to="/aboutUs" className="navItem" id="about-us">About Us</Link>
+                    <Link to="/meetTheTeam" className="navItem onPage">Meet The Team</Link>
                     <Link to="/events" className="navItem">Events</Link>
+                    <Link to="/contactUs" className="navItem">Contact Us</Link>
                     <Link to="/media" className="navItem">Media</Link>
                 </div>
             </header>
@@ -53,22 +54,22 @@ function MeetTheTeam() {
                             <div className="flip-card-inner">
                                 <div className="flip-card-front">
 
-                                <div className="container">
+                                    <div className="container">
 
-                                    
 
-                                    <Card.Img variant="top" src={item.picture} style={{ width: "100%" }}></Card.Img>
-                                    <Card.Body>
-                                        <Card.Title>{item.name}</Card.Title>
-                                    </Card.Body>
-                                </div>
+
+                                        <Card.Img variant="top" src={item.picture} style={{ width: "100%" }}></Card.Img>
+                                        <Card.Body>
+                                            <Card.Title>{item.name}</Card.Title>
+                                        </Card.Body>
+                                    </div>
 
                                 </div>
 
                                 <div className="flip-card-back">
                                     <div className="container">
-                                        <Card.Img variant="top" src={item.profilePic} style={{width: "100%", height: "144px"}} />
-                                        <PhotoUpload 
+                                        <Card.Img variant="top" src={item.profilePic} style={{ width: "100%", height: "144px" }} />
+                                        <PhotoUpload
                                             id={item._id}
                                             onSaveImage={saveImage} />
                                         <Card.Title>Leader: {item.name}</Card.Title>
