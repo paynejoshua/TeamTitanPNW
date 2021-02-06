@@ -15,9 +15,9 @@ function Home() {
                 <Container className="homeMenuSmall homeMenuLarge">
                 <Row className="d-flex h-100 justify-content-center justify-content-md-start">
                     <Col xs={12} className='d-flex justify-content-center justify-content-md-start'>
-                        <Jumbotron className="transparent">
+ 
                             <div className="title">Team Titan PNW</div>
-                        </Jumbotron>
+                     
                     </Col>
                     <div>
 
