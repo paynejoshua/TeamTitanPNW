@@ -1,35 +1,56 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Card from "react-bootstrap/Card"
-import api from "../api/index"
-import PhotoUpload from "../components/PhotoUpload/index"
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+// The following will be added in a future DB version of the website
+// import api from "../api/index"
+import PhotoUpload from "../components/PhotoUpload/index";
+import Tabletop from "tabletop";
+import ReactCardFlip from "react-card-flip";
+import CardFront from "../components/CardFront";
+import CardBack from "../components/CardBack"
+
 
 function MeetTheTeam() {
 
     const [profile, setProfile] = useState([])
+    const [isFlipped, setIsFlipped] = useState(false)
 
     useEffect(() => {
-        api.getAllProfiles()
-            .then(res => {
-                setProfile(res.data.data)
-            })
+        // The following will be added in a future DB version of the website
+        // api.getAllProfiles()
+        //     .then(res => {
+        //         setProfile(res.data.data)
+        //     })
+
+        Tabletop.init({
+            key: "1RGTkLQ4oS1nNgOvpAjw0IgIFcHrm7weQ8IQKbJxjNxE",
+            simpleSheet: true
+          })
+            .then((data) => {
+                setProfile(data)
+                console.log(data)
+              })
+            .catch((err) => console.warn(err));
     }, [])
 
-    const saveImage = (id, image) => {
-        // console.log(profile)
-        // console.log("image" ,image)
-        // setProfile(profile.map((item) => {
-        //     if (item._id == id ) {
-        //         console.log("item.profilePic 1", image)
-        //         item.profilePic = image
-        //         console.log("item.profilePic 2", item.profilePic)
-        //     }
-        //     return item
-        // }))
+    // const saveImage = (id, image) => {
+    //     console.log(profile)
+    //     console.log("image" ,image)
+    //     setProfile(profile.map((item) => {
+    //         if (item._id == id ) {
+    //             console.log("item.profilePic 1", image)
+    //             item.profilePic = image
+    //             console.log("item.profilePic 2", item.profilePic)
+    //         }
+    //         return item
+    //     }))
 
-        window.location.reload()
+    //     window.location.reload()
 
-    }
+    // }
 
 
     return (
@@ -47,43 +68,44 @@ function MeetTheTeam() {
 
             <h1 className="pageTitle">Meet The Team</h1>
 
-            <section className="card-layout">
+            <Container className="mt-5">
+                <Row>
                 {profile.map(item => {
                     return (
-                        <Card key={item.name} style={{ width: '18rem' }} className="flip-card">
-                            <div className="flip-card-inner">
-                                <div className="flip-card-front">
+                        <Col key={item.name}>
 
-                                    <div className="container">
+                        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+                            
+                            
+                            
+                            <CardFront key="front"
+                                photo={item.Photo}
+                                name={item.Name}
+                                callSign={item.Callsign}
+                                flip={() => setIsFlipped(true)}
+                                >
+                            </CardFront>
 
+                            <CardBack key="back"
+                                squad={item.Squad}
+                                rank={item.Rank}
+                                flip={() => setIsFlipped(false)}
+                                >
+                            </CardBack>
 
+                        
+                        
+                        </ReactCardFlip>    
 
-                                        <Card.Img variant="top" src={item.picture} style={{ width: "100%" }}></Card.Img>
-                                        <Card.Body>
-                                            <Card.Title>{item.name}</Card.Title>
-                                        </Card.Body>
-                                    </div>
+                        </Col>
 
-                                </div>
-
-                                <div className="flip-card-back">
-                                    <div className="container">
-                                        <Card.Img variant="top" src={item.profilePic} style={{ width: "100%", height: "144px" }} />
-                                        <PhotoUpload
-                                            id={item._id}
-                                            onSaveImage={saveImage} />
-                                        <Card.Title>Leader: {item.name}</Card.Title>
-                                        <Card.Title>Call Sign: {item.callSign}</Card.Title>
-                                        <Card.Title>Faction: {item.faction}</Card.Title>
-                                        <Card.Body>{item.description}</Card.Body>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </Card>
+                           
+                        
                     )
                 })}
-            </section>
+                </Row>
+
+            </Container>
 
 
 
