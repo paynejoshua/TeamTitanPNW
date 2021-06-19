@@ -167,6 +167,12 @@
 
 .navHeader {
   background-color: #444444;
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%
 }
 
 .navItem :hover {
