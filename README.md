@@ -1,33 +1,70 @@
-# Overview
-Welcome to the Team Titan PNW Airsoft website. This is a website for an airsoft team in Washington State. 
-Over the last 2 years this team has continued to grow in numbers and in recognition. This website is meant to 
-help the team direct inquiries and information about their team to anyone who is interested in joining their team. 
+# Getting Started with Create React App
 
-# Styling
-The main styling aim I took when building this website was to make it feel like a video game menu. Inspired by games like
-Call of Duty Ghosts, Batman Arkham Asylum, Unreal Tournament, etc. I attempted to give the user that same feel. My approach to
-accomplishing this was to study the layouts of video game menu layouts and implement some common traits into this website. 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Current State
-Currently the Team Titan PNW website features the following pages:
-Home
-About Us
-Contact Us
-Events
-Media
-Meet The Team
+## Available Scripts
 
-As of right now the website is static with no backend data management or routing. This will be the next step of development. 
+In the project directory, you can run:
 
-# Technologies Used
-This website utilizes the following technologies:
-React
-GitHub
+### `npm start`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-# Future Developments
-Here are some things that I will be looking to implement in the future:
-[] MongoDB for data storage
-[] Interactive Calendar
-[] Admin Log In page
-[] Active Contact Us Page (currently this page is static. I will be implementing a way for inquiries to actually be sent to an email address)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

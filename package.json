@@ -1,40 +1,49 @@
 {
-  "name": "TeamTitanPNW",
-  "version": "1.0.0",
-  "description": "Welcome to the Team Titan PNW Airsoft website. This is a website for an airsoft team in Washington State.  Over the last 2 years this team has continued to grow in numbers and in recognition. This website is meant to  help the team direct inquiries and information about their team to anyone who is interested in joining their team.",
-  "main": "index.js",
+  "name": "team-titan-pnw",
+  "proxy": "http://localhost:3001",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "bootstrap": "^4.6.0",
     "moment": "^2.29.1",
-    "mongodb": "^3.6.3",
-    "mongoose": "^5.11.9",
-    "node": "^15.4.0",
-    "nodemon": "^2.0.6",
-    "react-moment": "^1.0.0"
+    "moment-timezone": "^0.5.32",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
+    "react-calendar": "^3.2.1",
+    "react-dom": "^17.0.1",
+    "react-moment": "^1.0.0",
+    "react-random-image": "^1.0.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-    "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/paynejoshua/TeamTitanPNW.git"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/paynejoshua/TeamTitanPNW/issues"
-  },
-  "homepage": "https://github.com/paynejoshua/TeamTitanPNW#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

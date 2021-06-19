@@ -1,0 +1,416 @@
+/* Styling for React App */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styling for Team Titan Website */
+
+* {
+  box-sizing: border-box;
+  cursor: crosshair;
+
+}
+
+@media only screen and (min-width: 768px){
+.fullScreenBG {
+  background-image: url("../src/assets/TeamPhotos/mainpagebackground.png");
+  width: 100vw;
+  height: 100vh;
+
+  /* Background image is centered vertically and horizontally at all times. */
+  background-position: center center;
+  
+  /* Background image doesn't tile. */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when  */
+  /* the content's height is greater than the image's height. */
+  background-attachment: fixed;
+  
+  /* Background image rescales based on the container's size. */
+  background-size: cover;
+  
+  /* Set a background color while the background image is loading. */
+  background-color:black
+}
+.menuItem {
+  font-family: 'Audiowide';
+  background: linear-gradient(180deg, rgba(153, 123, 2, 0.7) 0%, rgba(196, 196, 196, 0) 100%);
+  /* background-color: #A88702; */
+  color: black;
+  text-decoration: none !important;
+  width: 255px;
+  margin: 2px;
+  padding: 5px;
+  
+  }
+  .menuItem:hover{
+    background-color: black;
+    color: #A88702;
+  
+  }
+
+  .title {
+    font-family: 'Audiowide';
+    color: #A88702;
+    font-size: 40px !important;
+    }
+  .homeMenuLarge {
+    padding-top: 270px !important;
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  .smallScreenBG{
+    background-image: url("../src/assets/TeamPhotos/smallLogo.jpg");
+    width: 100vw;
+    height: 100vh;
+  
+    /* Background image is centered vertically and horizontally at all times. */
+    background-position: center center;
+    
+    /* Background image doesn't tile. */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when  */
+    /* the content's height is greater than the image's height. */
+    background-attachment: fixed;
+    
+    /* Background image rescales based on the container's size. */
+    background-size: contain;
+    background-color: black;
+  }
+
+  .menuItem {
+    font-family: 'Audiowide';
+    background-color: #A88702;
+    color: black;
+    text-decoration: none !important;
+    width: 311px;
+    margin: 2px;
+    padding: 2px;
+    height: 53px;
+    text-align: center;
+    }
+  
+    .menuItem:hover{
+      background-color: black;
+      color: #A88702;
+      font-size: x-large;
+      text-shadow: whitesmoke;
+      }
+
+  .title {
+    font-family: 'Audiowide';
+    color: #A88702;
+    font-size: x-large !important;
+    }
+  
+  .homeMenuSmall {
+    padding-top: 280px !important;
+  }
+
+  .aboutUsSmall {
+    background: rgba(255, 255, 255, 0.25)
+  }
+
+}
+
+.transparent {
+  background-color: transparent !important;
+}
+
+
+/* Menu Items */
+
+
+.navHeader {
+  background-color: #444444;
+}
+
+.navItem :hover {
+background: linear-gradient(180deg, rgba(168, 135, 2, 0.5) 0%, rgba(196, 196, 196, 0) 100%);
+background-color: #A88702;
+text-decoration: none !important;
+color: rgba(163, 163, 163);
+}
+
+.onPage {
+  background: linear-gradient(180deg, rgba(168, 135, 2, 0.5) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.navItem{
+  position: relative;
+  font-family: 'Audiowide';
+  font-size: 3vw;
+  line-height: 250%;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(163, 163, 163);
+  text-decoration: none;
+  padding: 1%;
+  }
+
+
+/* Team Titan PNW */
+
+.pageTitle {
+color: white;
+background-color: #444444;
+font-family: 'Audiowide';
+font-style: normal;
+font-weight: normal;
+font-size: 3.5vw;
+text-align: center;
+line-height: 0px;
+}
+
+.card-layout:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0);
+  transition: 0.3s;
+  text-align: center;  
+  float: left;
+  width: 25%;
+  margin: 4%;
+}
+
+h4 {
+  background-color: #A88702;
+  font-family: 'Audiowide';
+}
+
+.name {
+  background-color: #A88702;
+  font-family: 'Audiowide';
+}
+
+.faction {
+  background-color: #A88702;
+  font-family: 'Audiowide';
+}
+
+.squad-name {
+  background-color: #A88702;
+  font-family: 'Audiowide';
+}
+
+.squad-description {
+  background-color: #A88702;
+  font-family: 'Audiowide';
+}
+
+
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0, 0.2);
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+background-color: transparent;
+width: 100%;
+height: 100%;
+perspective: 1000px; /* Remove this if you don't want the 3D effect */
+justify-content: center;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: 0.8s;
+transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden; /* Safari */
+backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+background-color: #A88702;
+color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+background-color: #A88702;
+
+transform: rotateY(180deg);
+}
+
+/* About Us Page */
+
+/* Add some padding inside the card container */
+.aboutUsContainer {
+  position: flex;
+  width: 76vw;
+  margin-left: 10vw;
+  font-family: "Audiowide";
+  color: black;
+  text-align: center;
+  background: rgba(196, 196, 196, 0.25);  
+}
+
+.aboutUsHeader {
+
+text-align: center;
+color: rgba(163, 163, 163);
+}
+
+.aboutUs {
+
+text-align: center;
+background: rgba(0, 0, 0, 0.25);
+color: rgba(163, 163, 163);
+}
+
+.teamContainer {
+padding: 2%;
+margin-top: 100%;
+}
+
+.teamMember {
+text-decoration: none;
+}
+
+/* Contact Us Page */
+
+
+
+/* Events */
+
+/* .eventDisplay {
+
+  position: absolute;
+  width: 50vw;
+  height: 40vw;
+  left: 30vw;
+  top: 10vw;
+  font-family: "Audiowide";
+  font-size: 1.5vw;
+  text-align: center;
+  overflow: scroll;
+  background-color: rgba(196, 196, 196, 0.5);
+  background-color: rgba(168, 135, 2, 0.5);
+
+} */
+
+.eventContainer {
+  background-color: rgba(168, 135, 2, 0.25);
+  list-style-type: none;
+  text-align: center;
+  color: white;
+}
+
+
+.eventTitleHeader {
+  text-decoration: underline;
+  color: white;
+  /* background-color: #444444; */
+  background-color: rgba(168, 135, 2, 0.5);
+  padding: 1vw;
+}
+
+.eventItem {
+position: relative;
+width: 100%;
+right: 1.8vw;
+list-style-type: none;
+text-align: center;
+color: white;
+background-color: rgba(168, 135, 2, 0.25);
+}
+
+.hyperLink {
+  color: white !important;
+  text-decoration: underline;
+  font-size: 1vw;
+
+}
+
+/* @media only screen and (min-width: 768px) {
+  .eventDisplay {
+
+    position: absolute;
+    width: 50vw;
+    height: 40vw;
+    left: 25vw;
+    top: 12vw;
+    font-family: "Audiowide";
+    font-size: 1.5vw;
+    text-align: center;
+    overflow: scroll;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eventDisplay {
+    width: 50%;
+    position: absolute;
+    overflow: scroll;
+    height: 54vw;
+    left: 25vw;
+    top: 17vw;
+    font-family: "Audiowide";
+    font-size: 3vw;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+} */
