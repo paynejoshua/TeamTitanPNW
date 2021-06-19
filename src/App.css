@@ -66,7 +66,10 @@
   background-size: cover;
   
   /* Set a background color while the background image is loading. */
-  background-color:black
+  background-color:black;
+
+  overflow: scroll;
+  
 }
 .menuItem {
   font-family: 'Audiowide';
@@ -115,6 +118,8 @@
     /* Background image rescales based on the container's size. */
     background-size: contain;
     background-color: black;
+
+    overflow: scroll;
   }
 
   .menuItem {
