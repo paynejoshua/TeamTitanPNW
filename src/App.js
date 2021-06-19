@@ -21,9 +21,9 @@ function App() {
        <Route exact path="/events" component={PageNav.events} />
        <Route exact path="/media" component={PageNav.media} />
        <Route exact path="/meetTheTeam" component={PageNav.meetTheTeam} />
-       <Route exact path="/imageupload" component={imgUpload} />
-       <Route exact path="/teamtitanadminpage" component={PageNav.adminPage}  />
-       <Route exact path="/teamtitanadminlogin" component={PageNav.adminLogin}  />
+       {/* <Route exact path="/imageupload" component={imgUpload} /> */}
+       {/* <Route exact path="/teamtitanadminpage" component={PageNav.adminPage}  /> */}
+       {/* <Route exact path="/teamtitanadminlogin" component={PageNav.adminLogin}  /> */}
      </Switch>
    </Router>
   );
