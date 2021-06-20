@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 
 // The following will be added in a future DB version of the website
 // import api from "../api/index"
-import PhotoUpload from "../components/PhotoUpload/index";
+// import PhotoUpload from "../components/PhotoUpload/index";
 import Tabletop from "tabletop";
 import ReactCardFlip from "react-card-flip";
 import CardFront from "../components/CardFront";
