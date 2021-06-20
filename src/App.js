@@ -2,10 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route} from "react-router-dom"
 import Switch from "react-router-dom/Switch";
 import PageNav from "./components/PageNavigation";
-import imgUpload from "./components/PhotoUpload/index";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// the following will be included in future DB version of site
+// import imgUpload from "./components/PhotoUpload/index";
 
  
 
