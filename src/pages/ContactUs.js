@@ -1,30 +1,30 @@
 import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import {Row, Col, Form, FormControl, InputGroup, Button} from "react-bootstrap"
-import API from "../api/index"
+// The following will be imported in future db version of site:
+// import API from "../api/index"
 
 function ContactUs() {
-
     const [name, setName] = useState()
     const [email, setEmail] = useState()
     const [subject, setSubject] = useState()
     const [question, setQuestion] = useState()
     const [validated, setValidated] = useState(false)
 
-    function sendMessage() {
+    // function sendMessage() {
         
-        if(!name || !email || !subject || !question){
-            alert("Please input all fields")
-        }
+    //     if(!name || !email || !subject || !question){
+    //         alert("Please input all fields")
+    //     }
 
-        const payload = {
-            name: name,
-            email: email,
-            subject: subject,
-            message: question
-        }
-        API.createMessage(payload)
-    }
+    //     const payload = {
+    //         name: name,
+    //         email: email,
+    //         subject: subject,
+    //         message: question
+    //     }
+    //     API.createMessage(payload)
+    // }
 
     return (
         <div className="fullScreenBG smallScreenBG">
@@ -43,7 +43,7 @@ function ContactUs() {
 
             <br />
 
-                <Row style={{display: "flex", justifyContent: "center"}}>
+                {/* <Row style={{display: "flex", justifyContent: "center"}}>
                     <Col sm={6} lg={9}>
                     <Form noValidate validated={validated}>
                 <Form.Group as={Row} controlId="formHorizontalTitle">
@@ -88,7 +88,7 @@ function ContactUs() {
 
             </Form>
                     </Col>
-                </Row>
+                </Row> */}
             
         </div>
     )
