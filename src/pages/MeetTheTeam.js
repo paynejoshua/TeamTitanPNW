@@ -16,7 +16,8 @@ import CardBack from "../components/CardBack"
 function MeetTheTeam() {
 
     const [profile, setProfile] = useState([])
-    const [isFlipped, setIsFlipped] = useState(false)
+    const [profileIsFlipped, setProfileIsFlipped] = useState([])
+
 
     useEffect(() => {
         // The following will be added in a future DB version of the website
@@ -30,7 +31,14 @@ function MeetTheTeam() {
             simpleSheet: true
           })
             .then((data) => {
+                let array = []
+
+                for(let i=0; i < data.length; i++){
+                    array.push(false)
+                }
+                setProfileIsFlipped(array)
                 setProfile(data)
+
                 console.log(data)
               })
             .catch((err) => console.warn(err));
@@ -52,6 +60,14 @@ function MeetTheTeam() {
 
     // }
 
+        function updateProfileIsFlipped(index, isFlipped){
+            // Make a shallow copy of the items
+    let items = [...profileIsFlipped];
+    // Replace the property you're interested in
+    items[index] = isFlipped;
+    // Set the state to our new copy
+    setProfileIsFlipped(items)
+        }
 
     return (
         <div className="fullScreenBG smallScreenBG">
@@ -70,11 +86,11 @@ function MeetTheTeam() {
 
             <Container className="mt-5">
                 <Row>
-                {profile.map(item => {
+                {profile.map((item, index) => {
                     return (
                         <Col key={item.name}>
 
-                        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+                        <ReactCardFlip isFlipped={profileIsFlipped[index]} flipDirection="horizontal">
                             
                             
                             
@@ -82,14 +98,15 @@ function MeetTheTeam() {
                                 photo={item.Photo}
                                 name={item.Name}
                                 callSign={item.Callsign}
-                                flip={() => setIsFlipped(true)}
+
+                                flip={() => updateProfileIsFlipped(index, true)}
                                 >
                             </CardFront>
 
                             <CardBack key="back"
                                 squad={item.Squad}
                                 rank={item.Rank}
-                                flip={() => setIsFlipped(false)}
+                                flip={() => updateProfileIsFlipped(index, false)}
                                 >
                             </CardBack>
 
