@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (
-   <Router> 
+   <Router basename={process.env.PUBLIC_URL}> 
      <Switch>
        <Route exact path="/" component={PageNav.home} />
        <Route exact path="/home" component={PageNav.home} />
