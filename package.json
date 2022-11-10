@@ -20,7 +20,7 @@
     "react-moment": "^1.0.0",
     "react-random-image": "^1.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "5.0.1",
     "tabletop": "^1.6.3",
     "web-vitals": "^0.2.4"
   },
